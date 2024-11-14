@@ -79,15 +79,8 @@ img {
 .wrapper-footer {
   background-color: #2e2f42;
   color: #ffffff;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  width: 100%;
   padding-top: 100px;
   padding-bottom: 100px;
-  display: block;
-  margin: 0 auto;
-  /*max-width: 1440px; */
 }
 .visually-hidden {
   position: absolute;
@@ -431,26 +424,11 @@ ul {
 .icon {
   fill: #f4f4fd;
 }
-
 .footer-logo-box {
   margin-right: 120px;
 }
 .footer-soc-box {
   margin-right: 80px;
-}
-/* Its works, but we need another way to realize it */
-/*
-.wrapper-team .icon {
-  width: 16px;
-  height: 16px;
-}
-.wrapper-footer .icon {
-  width: 24px;
-  height: 24px;
-}
-*/
-.test {
-  align-items: baseline;
 }
 .modal-overlay {
   background: rgba(46, 47, 66, 0.4);
@@ -462,10 +440,10 @@ ul {
   z-index: 999;
   display: flex;
   justify-content: center;
-  /*hide modal
+  /*hide modal*/
 
   opacity: 0;
-  pointer-events: none;*/
+  pointer-events: none;
 }
 .modal-overlay .is-open {
   opacity: 1;
@@ -540,8 +518,6 @@ ul {
 }
 .form-field {
   display: flex;
-  align-items: center;
-  gap: 4px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -577,18 +553,24 @@ ul {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #2e2f42;
   outline: none;
-}
-.footer-form-input::placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  /* line-height: 24px; */
   line-height: 200%;
   letter-spacing: 0.04em;
   color: #fff;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 16px;
+}
+
+.footer-form-input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  color: #fff;
 }
 .button-footer {
   display: flex;
@@ -610,7 +592,6 @@ ul {
   text-align: center;
   color: #fff;
 }
-
 .button-footer:hover,
 .button-main:focus {
   background-color: #404bbf;
@@ -661,12 +642,8 @@ textarea::placeholder {
   text-decoration-skip-ink: none;
   color: #4d5ae5;
 }
-
-
 .checkbox-input {
-cursor: pointer
-  outline: none;
-  outline-offset: none;
+  cursor: pointer;
 }
 .form-checkbox-label {
   display: flex;
@@ -689,32 +666,13 @@ cursor: pointer
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  fill: black;
+  fill: transparent;
 }
-
-/*BACKAPP THAT SHIIT
-
-.form-checkbox-label {
-  display: block;
-  padding-left: 1.5em;
-  gap: 4px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 117%;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
+.checkbox-input:checked + .form-checkbox-label > .check {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
-.form-checkbox {
-  appearance: none;
-  position: absolute;
+.checkbox-input:focus + .form-checkbox-label > .check {
+  border: #31d0aa;
 }
-.check {
-  cursor: pointer;
-  margin-left: -1.5em;
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-}*/
