@@ -427,8 +427,8 @@
     <!-- MODAL WINDOW-->
     <div class="modal-overlay">
       <div class="modal">
-        <button type="button" class="icon-close">
-          <svg width="8" height 8>
+        <button type="submit" class="icon-close">
+          <svg width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
@@ -443,7 +443,7 @@
             </label>
             <label class="form-label"
               >Phone
-              <input class="form-input" type="tel" name="usertel" min="8" />
+              <input class="form-input" type="tel" name="usertel" />
             </label>
             <label class="form-label"
               >Email<input class="form-input" type="email" name="useremail"
@@ -523,12 +523,12 @@
               </a>
             </li>
           </ul>
-          <!--Social box end-->
         </div>
-        <div>
+        <!--Social box end-->
+        <div class="subsr">
           <p class="footer-social-txt">Subscribe</p>
-          <div class="footer-form-box">
-            <label>
+          <form class="footer-form-box">
+            <label class="footer-form-label">
               <input
                 class="footer-form-input"
                 type="email"
@@ -536,13 +536,13 @@
                 placeholder="E-mail"
               />
             </label>
-            <button type="button" class="button-footer">
+            <button type="submit" class="button-footer">
               Subscribe
               <svg width="24" height="24" class="icon-footer">
                 <use href="./images/icons.svg#icon-subscribe"></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
