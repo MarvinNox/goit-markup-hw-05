@@ -671,7 +671,6 @@ ul {
   cursor: pointer;
 }
 .form-checkbox-label {
-  display: flex;
   gap: 4px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -685,7 +684,6 @@ ul {
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  display: inline-flex;
   display: inline-flex;
   justify-content: center;
   align-items: center;
