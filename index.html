@@ -424,12 +424,64 @@
         </div>
       </section>
     </main>
+    <!-- MODAL WINDOW-->
+    <div class="modal-overlay">
+      <div class="modal">
+        <button type="button" class="icon-close">
+          <svg width="8" height 8>
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form class="form">
+          <fieldset class="field-group">
+            <legend class="form-title">
+              Leave your contacts and we will call you back
+            </legend>
+            <label class="form-label"
+              >Name
+              <input class="form-input" type="text" name="username" autofocus />
+            </label>
+            <label class="form-label"
+              >Phone
+              <input class="form-input" type="tel" name="usertel" min="8" />
+            </label>
+            <label class="form-label"
+              >Email<input class="form-input" type="email" name="useremail"
+            /></label>
+            <label class="form-label"
+              >Comment
+              <textarea name="usercomment" placeholder="Text input"></textarea>
+            </label>
+          </fieldset>
+          <fieldset class="field-group">
+            <div class="form-field">
+              <label class="form-checkbox-label">
+                <input
+                  class="checkbox-input visually-hidden"
+                  name="user-privacy"
+                  type="checkbox"
+                  value="true"
+                />
+                <span class="check">
+                  <svg width="10" height="8">
+                    <use href="/images/icons.svg#icon-checkbox-on"></use>
+                  </svg> </span
+                >I accept the terms and conditions of the
+                <a href="">Privacy Policy</a>
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="button" class="button-main">Send</button>
+        </form>
+      </div>
+    </div>
     <!---FOOTER STARTS 000000000000000000000000000000000000000000000000000000000-->
     <footer class="wrapper-footer">
-      <div class="container header-flex test">
+      <div class="container header-flex">
         <!-- Logo BOX-->
         <div class="footer-logo-box">
-          <a href="./index.html" class="logo-footer"
+          <a href="./index.html" class="footer-logo-link"
             >Web<span class="logo-studio-white">Studio</span></a
           >
           <p class="small-text-footer">
@@ -438,7 +490,7 @@
           </p>
         </div>
         <!--Social box start-->
-        <div>
+        <div class="footer-soc-box">
           <p class="footer-social-txt">Social media</p>
           <ul class="social-box-list">
             <li class="social-box-item">
@@ -471,6 +523,25 @@
             </li>
           </ul>
           <!--Social box end-->
+        </div>
+        <div>
+          <p class="footer-social-txt">Subscribe</p>
+          <div class="footer-form-box">
+            <label>
+              <input
+                class="footer-form-input"
+                type="email"
+                name="useremail"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="button" class="button-footer">
+              Subscribe
+              <svg width="24" height="24" class="icon-footer">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </footer>
