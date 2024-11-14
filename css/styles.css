@@ -200,6 +200,8 @@ a:hover {
   letter-spacing: 4%;
   line-height: 150%;
   font-weight: 500;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
   letter-spacing: 0.04em;
   border: none;
@@ -437,25 +439,31 @@ ul {
   z-index: 999;
   display: flex;
   justify-content: center;
-  /*hide modal*/
   opacity: 0;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-open {
   opacity: 1;
   pointer-events: auto;
 }
 .modal {
+  position: absolute;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   border-radius: 4px;
   width: 408px;
-  max-height: 584px;
-  margin: 80px 516px 8px;
+  min-height: 584px;
+  padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-close {
-  border-radius: 100%;
+.bttn-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 24px;
@@ -466,15 +474,19 @@ ul {
   fill: #2e2f42;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin: 24px 24px 24px 360px;
+  padding: 0;
 }
-.icon-close:hover {
+.bttn-close:hover,
+.bttn-close:focus {
   background-color: #404bbf;
   fill: #fff;
   border: none;
 }
+.icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .form-title {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -483,52 +495,56 @@ ul {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin: 0;
   margin-bottom: 16px;
 }
 .form {
   display: flex;
   flex-direction: column;
   max-width: 360px;
-  margin: 0 24px 16px;
 }
 .field-group {
-  padding: 0;
-  margin: 0;
+  margin-bottom: 16px;
   border: none;
-  gap: 8px;
   display: flex;
   flex-direction: column;
 }
-.form-label {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 117%;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-}
-.form-field {
-  display: flex;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 117%;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  margin-top: 16px;
+.field-checkbox {
   margin-bottom: 24px;
+}
+.checkbox-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
+.form-label {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.lttl-bttn {
+  position: relative;
 }
 .form-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
+  background-color: transparent;
+  width: 100%;
   height: 40px;
-  outline: none;
-  padding-left: 12px;
+  outline: transparent;
+  padding-left: 38px;
+  margin-bottom: 8px; /* SHITY */
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -539,7 +555,17 @@ ul {
 }
 .form-input:focus-within {
   border: 1px solid #4d5ae5;
-  border-radius: 4px;
+}
+.icon-modal {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus + .icon-modal {
+  fill: #4d5ae5;
 }
 .footer-form-input {
   border: 1px solid #fff;
@@ -606,28 +632,29 @@ ul {
 .footer-form-label {
   display: flex;
 }
-textarea {
-  border: 1px solid rgba(46, 47, 66, 0.4);
+.text-input {
   border-radius: 4px;
   width: 360px;
   height: 120px;
   resize: none;
   padding-top: 8px;
   padding-left: 16px;
-  outline: none;
+  outline: transparent;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 117%;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-textarea:focus-within {
+.text-input:focus {
   border: 1px solid #4d5ae5;
   border-radius: 4px;
 }
-textarea::placeholder {
+.text-input::placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -635,14 +662,7 @@ textarea::placeholder {
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
-.field-group a {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 133%;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #4d5ae5;
-}
+
 .checkbox-input {
   cursor: pointer;
 }
@@ -679,4 +699,6 @@ textarea::placeholder {
 }
 .subsr {
   margin-left: 80px;
+}
+.form-checkbox-label {
 }
