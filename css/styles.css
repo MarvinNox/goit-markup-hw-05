@@ -504,7 +504,7 @@ ul {
   max-width: 360px;
 }
 .field-group {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   border: none;
   display: flex;
   flex-direction: column;
@@ -544,14 +544,14 @@ ul {
   height: 40px;
   outline: transparent;
   padding-left: 38px;
-  margin-bottom: 8px; /* SHITY */
+  /* SHITY */
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 117%;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus-within {
   border: 1px solid #4d5ae5;

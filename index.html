@@ -496,7 +496,7 @@
     <!-- MODAL WINDOW-->
     <div class="modal-overlay">
       <div class="modal">
-        <button type="submit" class="bttn-close">
+        <button type="button" class="bttn-close">
           <svg width="8" height="8" class="icon-close">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -504,10 +504,10 @@
         <p class="form-title">Leave your contacts and we will call you back</p>
         <form class="form">
           <div class="field-group">
-            <label for="names" class="form-label">Name</label>
+            <label for="user-name" class="form-label">Name</label>
             <div class="lttl-bttn">
               <input
-                id="names"
+                id="user-name"
                 class="form-input"
                 type="text"
                 name="username"
@@ -517,6 +517,8 @@
                 <use href="./images/icons.svg#icon-form-name"></use>
               </svg>
             </div>
+          </div>
+          <div class="field-group">
             <label for="tels" class="form-label">Phone</label>
             <div class="lttl-bttn">
               <input id="tels" class="form-input" type="tel" name="usertel" />
@@ -524,6 +526,8 @@
                 <use href="./images/icons.svg#icon-form-tel"></use>
               </svg>
             </div>
+          </div>
+          <div class="field-group">
             <label for="emails" class="form-label">Email</label>
             <div class="lttl-bttn">
               <input
