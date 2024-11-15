@@ -526,7 +526,6 @@ ul {
   text-decoration-skip-ink: none;
   color: #4d5ae5;
 }
-
 .form-label {
   display: block;
   cursor: pointer;
@@ -638,6 +637,7 @@ ul {
   display: flex;
 }
 .text-input {
+  display: block;
   border-radius: 4px;
   width: 360px;
   height: 120px;
@@ -688,9 +688,11 @@ ul {
   justify-content: center;
   align-items: center;
   fill: transparent;
+  background-color: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
 }
 .checkbox-input:checked + .form-checkbox-label > .check {
   background-color: #404bbf;
@@ -700,6 +702,6 @@ ul {
 .checkbox-input:focus + .form-checkbox-label > .check {
   border: #404bbf;
 }
-.subsr {
+.subsribe-box {
   margin-left: 80px;
 }
